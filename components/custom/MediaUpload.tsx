@@ -214,16 +214,16 @@ export default function MediaUpload({
     const newFiles = [...files];
     newFiles.splice(index, 1);
     onChange(newFiles);
-    try {
-      await axios.delete("/api/delete-file", {
-        data: {
-          fileName:
-            previewUrl?.split("/")?.[previewUrl?.split("/")?.length - 1],
-        },
-      });
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   await axios.delete("/api/delete-file", {
+    //     data: {
+    //       fileName:
+    //         previewUrl?.split("/")?.[previewUrl?.split("/")?.length - 1],
+    //     },
+    //   });
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   const triggerFileInput = () => {
